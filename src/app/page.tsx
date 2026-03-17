@@ -1,7 +1,11 @@
+import { Button } from "@/components/ui/button";
+
 const page = () => {
   return (
-    <div className="text-red-500">
-      POLARIS
+    <div>
+      <Button variant={"destructive"}>
+        CLICK ME
+      </Button>
     </div>
   )
 }
