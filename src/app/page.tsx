@@ -1,13 +1,24 @@
+"use client";
+
+import { useQuery } from "convex/react";
+import { api } from "../../convex/_generated/api";
+
 import { Button } from "@/components/ui/button";
 
-const page = () => {
+
+const X = () => {
+  const tasks = useQuery(api.tasks.get);
+
   return (
-    <div>
-      <Button variant={"destructive"}>
-        CLICK ME
-      </Button>
+    <div className="felx flex-col gap-2 p-4">
+      {tasks?.map((task) => (
+        <div className="border rounded p-2 flex flex-col" key={task._id}>
+          <p>{task.text}</p>
+          <p>Is Completed: {`${task.isCompleted}`}</p>
+        </div>
+      ))}
     </div>
   )
 }
 
-export default page
+export default X

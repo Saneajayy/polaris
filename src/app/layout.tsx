@@ -4,6 +4,8 @@ import { ClerkProvider, Show, SignInButton, SignUpButton, UserButton } from '@cl
 import {dark} from "@clerk/themes";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ConvexClientProvider } from "@/components/convex-client-provider";
+
 
 
 const inter = Inter({
@@ -42,6 +44,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange>
 
+            <ConvexClientProvider>
             <header className="flex justify-end items-center p-4 gap-4 h-16">
             <Show when="signed-out">
               <SignInButton />
@@ -57,6 +60,7 @@ export default function RootLayout({
           </header>
             
           {children}
+          </ConvexClientProvider>
           </ThemeProvider>
         </body>
       </html>
