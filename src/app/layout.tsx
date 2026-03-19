@@ -34,7 +34,7 @@ export default function RootLayout({
       appearance={{
         theme: dark,
       }}>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
           className={`${inter.variable} ${plexMono.variable} antialiased`}
         >
