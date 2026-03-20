@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 
 const X = () => {
   const projects = useQuery(api.projects.get);
+  console.log("projects:", projects);
   const createProject = useMutation(api.projects.create);
   
 
