@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export const UnauthenticatedView = () => {
     return (
         <div className="flex items-center justify-center min-h-screen bg-background px-4">
-            <div className="w-full max-w-lg bg-muted">
+            <div className="w-full max-w-lg">
                 <Item variant="outline">
                     <ItemMedia variant="icon">
                         <ShieldAlertIcon/>
